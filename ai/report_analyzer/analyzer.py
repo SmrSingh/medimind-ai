@@ -2,10 +2,14 @@ import re
 from ai.rag import MedicalRAG
 
 
+from ai.llm import MedicalLLM
+
 class MedicalReportAnalyzer:
 
     def __init__(self):
+
         self.rag = MedicalRAG()
+        self.llm = MedicalLLM()
 
     def extract_parameters(self, text):
 
@@ -74,46 +78,35 @@ class MedicalReportAnalyzer:
         return parameters
     def generate_summary(self, parameters):
 
-        abnormal = []
+        findings = []
 
         for parameter in parameters:
 
-            if parameter["status"] == "Normal":
-                continue
-
-            abnormal.append(
-            f"{parameter['parameter']} : "
-            f"{parameter['value']} {parameter['unit']} "
-            f"({parameter['status']})"
+            findings.append(
+                f"{parameter['parameter']}: "
+                f"{parameter['value']} {parameter['unit']} "
+                f"({parameter['status']})"
             )
 
-        if not abnormal:
+        prompt = f"""
+You are an experienced physician.
 
-            return "All laboratory parameters are within the reference range."
+Below are the laboratory findings.
 
-        findings = "\n".join(abnormal)
-
-        question = f"""
-Below are the abnormal laboratory findings.
-
-{findings}
+{chr(10).join(findings)}
 
 Generate:
 
-1. Overall clinical summary
+1. A short overall summary.
+2. Mention any abnormal parameters.
+3. Mention possible clinical patterns without making a diagnosis.
+4. Suggest discussing abnormal findings with a healthcare professional.
+5. State that this is educational information and not medical advice.
 
-2. Possible pattern (do not diagnose)
-
-3. Questions to discuss with a healthcare provider
-
-4. Lifestyle considerations if appropriate
-
-5. Mention that this is educational information only.
+Keep the response concise and easy to understand.
 """
 
-        response = self.rag.ask(question)
-
-        return response["answer"]
+        return self.llm.generate_without_rag(prompt)
 
 from ai.report_analyzer.parser import MedicalReportParser
 

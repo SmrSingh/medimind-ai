@@ -61,7 +61,24 @@ Instructions
                 time.sleep(2)
 
         return "The language model is temporarily unavailable. Please try again."
+    def generate_without_rag(self, prompt: str):
 
+        import time
+
+        for attempt in range(3):
+            try:
+                response = self.client.models.generate_content(
+                    model=self.model,
+                    contents=prompt
+                )
+
+                return response.text
+
+            except Exception as e:
+                print(f"Attempt {attempt + 1} failed: {e}")
+                time.sleep(2)
+
+        return "The language model is temporarily unavailable. Please try again."
 
 if __name__ == "__main__":
 

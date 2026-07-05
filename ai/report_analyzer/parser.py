@@ -1,3 +1,5 @@
+
+
 import fitz
 from pathlib import Path
 
@@ -15,12 +17,17 @@ class MedicalReportParser:
         full_text = []
 
         for page in document:
-
             full_text.append(page.get_text())
 
         document.close()
 
-        return "\n".join(full_text)
+        extracted_text = "\n".join(full_text)
+
+        print("=" * 80)
+        print(extracted_text)
+        print("=" * 80)
+
+        return extracted_text
 
 
 if __name__ == "__main__":
@@ -32,5 +39,4 @@ if __name__ == "__main__":
     text = parser.extract_text()
 
     print("=" * 80)
-
     print(text)
