@@ -33,7 +33,7 @@ class MedicalReportParser:
 if __name__ == "__main__":
 
     parser = MedicalReportParser(
-        "datasets/reports/Sample_CBC_Report.pdf"
+    "datasets/reports/lft/Sample_LFT_Report.pdf"
     )
 
     text = parser.extract_text()

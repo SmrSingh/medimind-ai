@@ -1,5 +1,7 @@
 import re
 
+from ai.report_analyzer.parser import MedicalReportParser
+
 
 class MedicalParameterExtractor:
 
@@ -59,6 +61,27 @@ class MedicalParameterExtractor:
                 i += 4
                 continue
 
+            # Pattern 3:
+            # Parameter
+            # Value
+            # Unit
+            # (Missing Reference Range)
+            if (
+                self._is_number(value)
+                and self._is_unit(third)
+                and not self._is_reference_range(fourth)
+            ):
+                parameters.append(
+                    {
+                        "parameter": parameter,
+                        "value": float(value),
+                        "unit": third,
+                        "reference_range": None,
+                    }
+                )
+                i += 3
+                continue
+
             # Pattern 2:
             # Parameter
             # Value
@@ -108,3 +131,20 @@ class MedicalParameterExtractor:
         or value.endswith("L")
         or value.endswith("%")
         )
+    from ai.report_analyzer.parser import MedicalReportParser
+
+
+if __name__ == "__main__":
+
+    parser = MedicalReportParser(
+        "datasets/reports/lft/Sample_LFT_Report.pdf"
+    )
+
+    text = parser.extract_text()
+
+    extractor = MedicalParameterExtractor()
+
+    parameters = extractor.extract(text)
+
+    for parameter in parameters:
+        print(parameter)

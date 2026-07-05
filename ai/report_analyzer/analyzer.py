@@ -37,6 +37,9 @@ class MedicalReportAnalyzer:
     def determine_status(self, parameters):
 
         for parameter in parameters:
+            if parameter["reference_range"] is None:
+                parameter["status"] = "Unknown"
+                continue
 
             reference = parameter["reference_range"].replace("–", "-")
 
