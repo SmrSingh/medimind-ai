@@ -5,17 +5,18 @@ from chromadb.utils.embedding_functions import SentenceTransformerEmbeddingFunct
 class MedicalSearcher:
 
     def __init__(self):
-
+        
         self.client = PersistentClient(path="database")
-
+        
         embedding_function = SentenceTransformerEmbeddingFunction(
             model_name="BAAI/bge-base-en-v1.5"
         )
-
+        
         self.collection = self.client.get_collection(
             name="medical_knowledge",
             embedding_function=embedding_function
         )
+        
 
     def search(self, query, top_k=3):
 
