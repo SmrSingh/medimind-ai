@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from backend.app.api.chat import router as chat_router
 from backend.app.api.report import router as report_router
+from backend.app.api.report_chat import router as report_chat_router
 app = FastAPI(
     title="MediMind AI",
     description="AI-powered Clinical Decision Support Platform",
@@ -30,4 +31,10 @@ app.include_router(
     report_router,
     prefix="/api",
     tags=["Report Analysis"]
+)
+
+app.include_router(
+    report_chat_router,
+    prefix="/api",
+    tags=["Report Chat"]
 )
