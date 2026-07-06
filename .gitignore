@@ -21,9 +21,11 @@ Thumbs.db
 
 # Build
 dist/
-build/
+frontend/dist/
 
 # Logs
 *.log
 
 uploads/
+node_modules/
+frontend/node_modules/
