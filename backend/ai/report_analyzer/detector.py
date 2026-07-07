@@ -1,4 +1,4 @@
-from ai.report_analyzer.report_types import ReportType
+from backend.ai.report_analyzer.report_types import ReportType
 
 
 class MedicalReportDetector:

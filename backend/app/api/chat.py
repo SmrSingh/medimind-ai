@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 from pydantic import BaseModel
 
-from ai.rag import MedicalRAG
+from backend.ai.rag import MedicalRAG
 
 router = APIRouter()
 
