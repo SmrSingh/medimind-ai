@@ -1,9 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from backend.app.api.chat import router as chat_router
-from backend.app.api.report import router as report_router
-from backend.app.api.report_chat import router as report_chat_router
+from app.api.chat import router as chat_router
+from app.api.report import router as report_router
+from app.api.report_chat import router as report_chat_router
 
 app = FastAPI(
     title="MediMind AI",

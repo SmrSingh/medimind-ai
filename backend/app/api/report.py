@@ -4,7 +4,7 @@ import uuid
 
 from fastapi import APIRouter, UploadFile, File, HTTPException
 
-from backend.app.services.service_container import report_service
+from app.services.service_container import report_service
 
 router = APIRouter()
 
