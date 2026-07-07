@@ -12,7 +12,7 @@ class MedicalSearcher:
             model_name="BAAI/bge-base-en-v1.5"
         )
         
-        self.collection = self.client.get_collection(
+        self.collection = self.client.get_or_create_collection(
             name="medical_knowledge",
             embedding_function=embedding_function
         )

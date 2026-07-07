@@ -5,7 +5,8 @@ from ai.rag import MedicalRAG
 
 router = APIRouter()
 
-rag = MedicalRAG()
+# Lazy-loaded singleton
+rag = None
 
 
 class ChatRequest(BaseModel):
@@ -14,6 +15,12 @@ class ChatRequest(BaseModel):
 
 @router.post("/chat")
 def chat(request: ChatRequest):
+    global rag
+
+    if rag is None:
+        print("Loading Medical RAG...")
+        rag = MedicalRAG()
+        print("Medical RAG loaded.")
 
     response = rag.ask(request.question)
 
