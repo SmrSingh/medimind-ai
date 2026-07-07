@@ -1,8 +1,8 @@
 import re
-from backend.ai.rag import MedicalRAG
+from ai.rag import MedicalRAG
 
 
-from backend.ai.llm import MedicalLLM
+from ai.llm import MedicalLLM
 
 class MedicalReportAnalyzer:
 
@@ -111,7 +111,7 @@ Keep the response concise and easy to understand.
 
         return self.llm.generate_without_rag(prompt)
 
-from backend.ai.report_analyzer.parser import MedicalReportParser
+from ai.report_analyzer.parser import MedicalReportParser
 
 if __name__ == "__main__":
 

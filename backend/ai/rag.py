@@ -1,5 +1,5 @@
-from backend.ai.vector_store.search import MedicalSearcher
-from backend.ai.llm import MedicalLLM
+from ai.vector_store.search import MedicalSearcher
+from ai.llm import MedicalLLM
 
 
 class MedicalRAG:

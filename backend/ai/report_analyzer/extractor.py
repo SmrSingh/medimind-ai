@@ -1,6 +1,6 @@
 import re
 
-from backend.ai.report_analyzer.parser import MedicalReportParser
+from ai.report_analyzer.parser import MedicalReportParser
 
 
 class MedicalParameterExtractor:
@@ -131,7 +131,7 @@ class MedicalParameterExtractor:
         or value.endswith("L")
         or value.endswith("%")
         )
-    from backend.ai.report_analyzer.parser import MedicalReportParser
+    from ai.report_analyzer.parser import MedicalReportParser
 
 
 if __name__ == "__main__":

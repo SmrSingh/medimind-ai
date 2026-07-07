@@ -1,8 +1,8 @@
 from pathlib import Path
 
-from backend.ai.knowledge_base.ingest import PDFIngestor
-from backend.ai.knowledge_base.chunker import MedicalChunker
-from backend.ai.vector_store.store import VectorStore
+from ai.knowledge_base.ingest import PDFIngestor
+from ai.knowledge_base.chunker import MedicalChunker
+from ai.vector_store.store import VectorStore
 
 
 class KnowledgeBaseBuilder:

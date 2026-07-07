@@ -1,10 +1,10 @@
 
 
-from backend.ai.report_analyzer.parser import MedicalReportParser
-from backend.ai.report_analyzer.extractor import MedicalParameterExtractor
-from backend.ai.report_analyzer.analyzer import MedicalReportAnalyzer
-from backend.ai.report_analyzer.detector import MedicalReportDetector
-from backend.ai.rag import MedicalRAG
+from ai.report_analyzer.parser import MedicalReportParser
+from ai.report_analyzer.extractor import MedicalParameterExtractor
+from ai.report_analyzer.analyzer import MedicalReportAnalyzer
+from ai.report_analyzer.detector import MedicalReportDetector
+from ai.rag import MedicalRAG
 class ReportService:
 
     def __init__(self):
