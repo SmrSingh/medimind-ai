@@ -9,7 +9,7 @@ class VectorStore:
         self.client = PersistentClient(path="database")
 
         embedding_function = SentenceTransformerEmbeddingFunction(
-            model_name="BAAI/bge-base-en-v1.5"
+            model_name="BAAI/bge-small-en-v1.5"
         )
 
         self.collection = self.client.get_or_create_collection(
