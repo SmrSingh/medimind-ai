@@ -266,32 +266,17 @@ Evidence-based medical Q&A using RAG.
 
 #  RAG Pipeline
 
-```
-Clinical Documents
-        │
-        ▼
-PDF Ingestion
-        │
-        ▼
-Text Chunking
-        │
-        ▼
-Sentence Embeddings
-        │
-        ▼
-ChromaDB Vector Store
-        │
-        ▼
-Semantic Search
-        │
-        ▼
-Relevant Context
-        │
-        ▼
-Gemini LLM
-        │
-        ▼
-Grounded Medical Response
+
+```mermaid
+flowchart TD
+    A[Clinical Documents] --> B[PDF Ingestion]
+    B --> C[Text Chunking]
+    C --> D[Sentence Embeddings]
+    D --> E[ChromaDB Vector Store]
+    E --> F[Semantic Search]
+    F --> G[Relevant Context]
+    G --> H[Gemini LLM]
+    H --> I[Grounded Medical Response]
 ```
 
 ---
