@@ -68,7 +68,21 @@ Responses are grounded in retrieved evidence instead of relying only on the lang
 - OCR Pipeline
 - Embedding-based Retrieval
 
+## Architecture
 
+```mermaid
+flowchart TD
+    A[Medical PDF] --> B[PDF Processing Engine]
+    B --> C[Parameter Extraction Engine]
+    C --> D[Clinical Report Classification]
+    D --> E[AI Report Analysis]
+    D --> F[Structured Parameters]
+    E --> G[Gemini LLM]
+    F --> H[Frontend Dashboard]
+    G --> I[AI Summary]
+    I --> J[Report Chat - RAG]
+    J --> K[ChromaDB Knowledge Base]
+```
 
 #  Tech Stack
 
