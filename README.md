@@ -8,6 +8,10 @@ The project demonstrates modern AI engineering practices including FastAPI, Reac
 > **Disclaimer:** MediMind AI is designed for educational purposes and clinical decision support. It is **not** a replacement for professional medical advice, diagnosis, or treatment.
 
 ---
+
+# Project Link
+https://medimind-ai-black.vercel.app/
+
 # Demo Video
   https://www.loom.com/share/2487764fd9bf4fd89bedeafd15807d62
   
