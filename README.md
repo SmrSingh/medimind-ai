@@ -72,7 +72,8 @@ Responses are grounded in retrieved evidence instead of relying only on the lang
 
 #  System Architecture
 
-```<img width="447" height="563" alt="image" src="https://github.com/user-attachments/assets/ac43523a-78c5-4fa6-9ea0-0e89ba9f11f2" />
+
+<img width="447" height="563" alt="image" src="https://github.com/user-attachments/assets/2d9b6839-bdc4-4f39-a83a-d3b0cac39c60" />
 
                     
 
