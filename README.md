@@ -68,16 +68,7 @@ Responses are grounded in retrieved evidence instead of relying only on the lang
 - OCR Pipeline
 - Embedding-based Retrieval
 
----
 
-#  System Architecture
-
-
-<img width="447" height="563" alt="image" src="https://github.com/user-attachments/assets/2d9b6839-bdc4-4f39-a83a-d3b0cac39c60" />
-
-                    
-
----
 
 #  Tech Stack
 
