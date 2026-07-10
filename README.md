@@ -1,5 +1,9 @@
 # 🩺 MediMind AI
 ### Intelligent AI-Powered Medical Report Analysis & Clinical Decision Support System
+![Python](https://img.shields.io/badge/Python-3.10+-blue)
+   ![FastAPI](https://img.shields.io/badge/FastAPI-Backend-teal)
+   ![React](https://img.shields.io/badge/React-Frontend-61DAFB)
+   ![License](https://img.shields.io/badge/License-MIT-green)
 
 MediMind AI is an end-to-end AI healthcare application that analyzes medical laboratory reports, extracts structured clinical information, performs evidence-based interpretation using Large Language Models (LLMs), and enables users to interact with their reports through Retrieval-Augmented Generation (RAG).
 
