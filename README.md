@@ -72,34 +72,9 @@ Responses are grounded in retrieved evidence instead of relying only on the lang
 
 #  System Architecture
 
-```
-                    Medical PDF
-                         │
-                         ▼
-                PDF Processing Engine
-                         │
-                         ▼
-              Parameter Extraction Engine
-                         │
-                         ▼
-             Clinical Report Classification
-                         │
-          ┌──────────────┴──────────────┐
-          ▼                             ▼
-   AI Report Analysis            Structured Parameters
-          │                             │
-          ▼                             ▼
-      Gemini LLM                  Frontend Dashboard
-          │
-          ▼
-      AI Summary
-          │
-          ▼
-      Report Chat (RAG)
-          │
-          ▼
-     ChromaDB Knowledge Base
-```
+```<img width="447" height="563" alt="image" src="https://github.com/user-attachments/assets/ac43523a-78c5-4fa6-9ea0-0e89ba9f11f2" />
+
+                    
 
 ---
 
