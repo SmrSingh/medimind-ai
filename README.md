@@ -150,6 +150,8 @@ MediMind AI
 ```
 
 ---
+# Screenshot
+<img width="1910" height="907" alt="image" src="https://github.com/user-attachments/assets/7c0947e1-6055-4c61-a7fa-4a717d411855" />
 
 #  Installation
 
